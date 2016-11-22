@@ -5,7 +5,7 @@
 html,
 body {
   margin: 0;
-  background-color: rgb(12, 12, 12);
+  background-color: black;
 }
 
 .module {
@@ -13,49 +13,31 @@ body {
   > *:last-child { margin-bottom: 0; }
 }
 
-.ul	{
-  color: red	
-}
+// Top Nav Bar
 
-.index {
+.nav-box {
   margin: 0 5em;
+} 
+    
+#top-nav ul li {
+  display: inline;
+  cursor: pointer;
 }
 
-#post {
-  text-align: center;
-}
-
-#post li {
-  list-style: none;
-}
-
-#post .list .list-item a {
+#top-nav ul li a {
   text-decoration: none;
-  display: block;
-  padding: 1.5em;
-  border-radius: 100px;
+  color: rgba(255, 255, 255, 1);
 }
 
-
-#post h2 {
-  margin: 0;
-  text-decoration: none;
-  color: rgb(254, 255, 234);
+.contact-link a {
+  float: right;
+  margin-left: 20px;
+}
+.about-link a {
+  float: right;
 }
 
-#post p {
-  color: rgba(254, 255, 234, .6);
-  margin-top: 0;
-  
-}
-
-#post .list .list-item a:hover {
-  background-color: rgba(254, 255, 234, .1);
-  p:hover {
-    color: red;
-    display: block;
-  }
-}
+// Banner
 
 .site-header {
 }
@@ -69,14 +51,6 @@ body {
   text-decoration: none;
   color: rgb(56, 56, 56);
 }
-
-@include media (30em) {
-  .site-header .container h1 img {
-    font-size: 3em;
-  }
-}
-
-
 
 .site-footer .copyright {
   color: rgba(226, 226, 226, .2);
