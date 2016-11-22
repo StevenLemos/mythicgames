@@ -13,31 +13,58 @@ body {
   > *:last-child { margin-bottom: 0; }
 }
 
-// Top Nav Bar
+hr {
+  text-align: center;
+  margin: 25px 20%;
+}
+
+// Top Nav Bar ------------
 
 .nav-box {
-  margin: 0 5em;
+  margin: 0 2em;
+  text-align: center;
 } 
+
+#top-nav ul {
+  padding: 0;
+}
     
 #top-nav ul li {
-  display: inline;
+  display: inline-block;
   cursor: pointer;
 }
 
 #top-nav ul li a {
   text-decoration: none;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(219, 219, 219);
+  font-size: 20px;
+  padding: 12px;
+}
+
+#top-nav ul li a:hover {
+  color: rgb(255, 255, 255);
 }
 
 .contact-link a {
-  float: right;
+  //float: right;
   margin-left: 20px;
 }
 .about-link a {
-  float: right;
+  //float: right;
+
 }
 
-// Banner
+// Desktop View
+
+@include media (45em) {
+  .nav-box {
+    position: absolute;
+    z-index: 1;
+    
+  }
+}
+ 
+// Banner ------------
 
 .site-header {
 }
@@ -45,9 +72,12 @@ body {
 .site-header .container h1 img {
   position: relative;
   left: 50%;
-  margin-left: -2.5em;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: -48%;
   font-size: 2em;
-  width: 5em;
+  //width: 7em;
+  width: 95%;
   text-decoration: none;
   color: rgb(56, 56, 56);
 }
@@ -55,6 +85,81 @@ body {
 .site-footer .copyright {
   color: rgba(226, 226, 226, .2);
   text-align: center;
-
-
 }
+
+// Content ABOUT ------------
+
+.about-content {
+  padding: 15px 0 45px 0;
+  background-color: #444;
+  text-align: center;
+  color: rgb(233, 233, 233);
+}
+
+.about-content h2 {
+  font-size: 30px;
+}
+
+.about-content .about-text {
+  margin: 0 3em;
+  font-size: 18px;
+}
+
+// Content VISIT ------------
+
+.visit-content {
+  padding: 20px 0 40px 0;
+  text-align: center;
+  color: rgb(233, 233, 233);
+}
+
+.visit-content h2 {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.visit-content li {
+  list-style: none;
+  margin-bottom: 10px;
+  
+}
+
+.visit-content .visit-text {
+  margin: 0 3em;
+  font-size: 18px;
+}
+
+.visit-content li a {
+  font-size: 30px;
+  color: rgb(233, 233, 233); 
+  text-decoration: none;
+  padding: 4.5px 10px;
+}
+
+.visit-content li a:hover {
+  color: rgb(255, 255, 255);
+}
+// Calander Tab  ------------
+
+.tab-box {
+  color: red;
+}
+
+
+
+
+
+
+// Contact ------------
+
+
+
+
+
+
+
+
+
+
+
+
