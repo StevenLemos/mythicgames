@@ -1,0 +1,18 @@
+// If vendor scss is not available,
+// include css files like this:
+//
+// require ../path/to/css/file.css
+
+@import "bourbon";
+@import "neat";
+
+$show_media_queries : true;
+$max-width: em(960);
+$base-font-size: em(16);
+
+@import "libs/normalize";
+
+@import "src/my_module";
+@import "src/media-query-helper";
+
+@import "author";

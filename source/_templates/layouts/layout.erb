@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
+
+  <title><%= (current_page.data.page_title || current_page.data.title).capitalize %> | <%= data.site.name %> </title>
+  <meta content="<%= current_page.data.description || data.site.description %>" name="description" />
+
+  <!--<script type="text/javascript" src="//use.typekit.net/<%= data.site.typekitId %>.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>-->
+
+  <%= stylesheet_link_tag "all" %>
+  <%= yield_content :css %>
+
+  <!--<script src="/assets/js/libs/modernizr-custom.js"></script>-->
+</head>
+<body class="<%= page_classes %>">
+
+
+<header class="site-header" role="banner">
+    <div class="container">
+      <h1>
+        <img src="/assets/img/joshlogo.png" alt="Josh Fry">
+      </h1>
+    </div>
+  </header>
+
+
+
+<div id="post">
+  <ul class="list">
+  <li class="list-item">
+    <a href="/">
+      <h2>Ruby on Rails - Respond to JSON Only</h2>
+        <p>You might have a Rails controller that is only meant to respond to JSON requests.</p>
+    </a>
+  </li> 
+    
+
+  <li class="list-item">
+    <a href="/">
+      <h2>Middleman Snippets</h2>
+        <p>Snippets 'n stuff for ERB templating in Middleman.</p>
+    </a>
+  </li> 
+    
+
+  <li class="list-item">
+    <a href="/">
+      <h2>Sass Media Query Helper For Designers</h2>
+        <p>A configureable design tool that displays the current min-width media query in the bottom right corner of your screen and updates as you re-size the browser window.</p>
+    </a>
+  </li>
+    
+
+  <li class="list-item">
+    <a href="/">
+      <h2>Omega Reset For Bourbon Neat</h2>
+        <p>A Sass mixin for Bourbon Neat that let's you change the number of columns at any breakpoint.</p>
+    </a>
+  </li>
+  </ul> 
+</div>
+
+
+
+  
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p class="copyright">Copyright &copy; <%= Time.now.year %> | <%= data.site.name %></p>
+    </div>
+  </footer>
+
+  <%= javascript_include_tag  "all" %>
+  <%= yield_content :js %>
+
+</body>
+</html>
