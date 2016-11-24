@@ -6,6 +6,11 @@ html,
 body {
   margin: 0;
   background-color: black;
+  font-family: 'Abel', sans-serif;
+}
+
+p {
+
 }
 
 .module {
@@ -25,33 +30,24 @@ hr {
   text-align: center;
 } 
 
-#top-nav ul {
+.nav-list {
   padding: 0;
+  margin-left: -20px; 
 }
     
-#top-nav ul li {
+.nav {
   display: inline-block;
   cursor: pointer;
 }
 
-#top-nav ul li a {
+.nav-link {
   text-decoration: none;
   color: rgb(219, 219, 219);
   font-size: 20px;
   padding: 12px;
-}
-
-#top-nav ul li a:hover {
-  color: rgb(255, 255, 255);
-}
-
-.contact-link a {
-  //float: right;
-  margin-left: 20px;
-}
-.about-link a {
-  //float: right;
-
+  &:hover {
+    color: rgb(255, 255, 255);
+  }
 }
 
 // Desktop View
@@ -60,7 +56,7 @@ hr {
   .nav-box {
     position: absolute;
     z-index: 1;
-    
+
   }
 }
  
@@ -69,86 +65,124 @@ hr {
 .site-header {
 }
 
-.site-header .container h1 img {
+.logo {
   position: relative;
   left: 50%;
-  margin-top: 30px;
+  margin-top: 15px;
   margin-bottom: 30px;
   margin-left: -48%;
   font-size: 2em;
-  //width: 7em;
   width: 95%;
   text-decoration: none;
   color: rgb(56, 56, 56);
 }
 
-.site-footer .copyright {
+.copyright {
   color: rgba(226, 226, 226, .2);
   text-align: center;
 }
 
 // Content ABOUT ------------
 
-.about-content {
+.about {
   padding: 15px 0 45px 0;
   background-color: #444;
   text-align: center;
-  color: rgb(233, 233, 233);
+  color: rgb(219, 219, 219);
 }
 
-.about-content h2 {
+.about-title {
   font-size: 30px;
 }
 
-.about-content .about-text {
+.about-text {
   margin: 0 3em;
   font-size: 18px;
 }
 
 // Content VISIT ------------
 
-.visit-content {
+.locations {
   padding: 20px 0 40px 0;
   text-align: center;
-  color: rgb(233, 233, 233);
+  color: rgb(219, 219, 219);
 }
 
-.visit-content h2 {
+.location-text{
   font-size: 30px;
-  margin-bottom: 5px;
+  margin-bottom: 0;
 }
 
-.visit-content li {
+.location {
   list-style: none;
   margin-bottom: 10px;
   
 }
 
-.visit-content .visit-text {
-  margin: 0 3em;
-  font-size: 18px;
-}
-
-.visit-content li a {
+.city {
   font-size: 30px;
-  color: rgb(233, 233, 233); 
+  color: rgb(219, 219, 219); 
   text-decoration: none;
   padding: 4.5px 10px;
 }
 
-.visit-content li a:hover {
+.city:hover {
   color: rgb(255, 255, 255);
+  background-color: rgba(219, 219, 219, 0.4);
+  cursor: pointer;
+  -webkit-transition: background-color .5s ease-out;
+  -moz-transition: background-color .5s ease-out;
+  -o-transition: background-color .5s ease-out;
+  transition: background-color .5s ease-out;
+
 }
+
 // Calander Tab  ------------
 
-.tab-box {
-  color: red;
+.tabs {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 370px;
 }
 
 
+.tab-headers {
+  margin: 0;
+  padding: 0;
+  color: rgb(233, 233, 233);
+}
 
+.tab-header {
+  list-style-type: none;
+  display: inline-block;
+  font-size: 19.6px;
+  background-color: #888;
+  margin: 0;
+  padding: 5px 15px;
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
 
+  &:hover {
+    color: #fff;
+    background-color: #666;
+  }
+  &.active {
+    color: #fff;
+    background-color: #666;
+  }
+}
 
+.tab-content {
+  display: none; // Uses Js for hide/show
+  font-weight: bold;
+  background-color: #c9c9c9;
+  padding: 30px;
+  border-radius: 0 0 10px 10px;
+
+  &.active {
+    display: block;
+  }
+}
 
 // Contact ------------
 

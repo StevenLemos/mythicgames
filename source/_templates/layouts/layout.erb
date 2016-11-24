@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
 
+  <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
   <title><%= (current_page.data.page_title || current_page.data.title).capitalize %> | <%= data.site.name %> </title>
   <meta content="<%= current_page.data.description || data.site.description %>" name="description" />
 
@@ -20,16 +21,16 @@
 <!--TOP NAV HERE-->
 
 <div class="nav-box">
-  <nav id="top-nav">
-    <ul>
-      <li>
-        <a href="/">Visit Us On Facebook</a>
+  <nav id="navs">
+    <ul class="nav-list">
+      <li class="nav">
+        <a href="/" class="nav-link">➜Visit Us On Facebook</a>
       </li>
-      <li class="contact-link">
-        <a href="/">Contact</a>
+      <li class="nav">
+        <a href="/" class="nav-link">Contact</a>
       </li>
-      <li class="about-link">
-        <a href="/">About</a>
+      <li class="nav">
+        <a href="/" class="nav-link">About</a>
       </li>
     </ul>
   </nav>
@@ -42,46 +43,63 @@
 <header class="site-header" role="banner">
     <div class="container">
       <h1>
-        <img src="/assets/img/topbanner.jpg" alt="Mythic Games">
+        <img class="logo" src="/assets/img/topbanner.jpg" alt="Mythic Games">
       </h1>
     </div>
   </header>
 
 <!--Banner STOP-->
-<!--CONTENT HERE-->
+<!--About-->
 
-<div class="about-content">
-  <h2>About Mythic Games</h2>
+<div class="about">
+  <h2 class="about-title">About MYTHIC GAMES</h2>
   <p class="about-text">Mythic Games is the premier  place to play Magic: the Gathering, Warhammer, Warhammer 40,000, Dungeons and Dragons, and other role playing games in Monterey County. </p>
 </div>
 
-<div class="visit-content">
-  <h2>Become A Legend</h2>
-  <p class="visit-text">Visit A Shop Near You!</p>
+<!--About Stop-->
+<!--Visit-->
+<div class="locations">
+  <h2 class="location-text">Visit A Shop Near You!</h2>
 <hr>
-  <li>
-    <a href="/">Monterey</a>
+  <li class="location">
+    <a href="/" class="city">-MONTEREY-</a>
   </li>
-  <li>
-    <a href="/">Salinas</a>
+  <li class="location">
+    <a href="/" class="city">-SALINAS-</a>
   </li>
-  <li>
-    <a href="/">Santa Cruz</a>
+  <li class="location">
+    <a href="/" class="city">-SANTA CRUZ-</a>
   </li>
 </div>
 
 <!--Tabs for Calander-->
-<div class="tab-box">
-  <div class="tab1">
-    <p>Magic: The Gathering</p>
+<div class="tabs">
+  <ul class="tab-headers">
+    <li class="tab-header active" data-tab-id="mtg">Magic: The Gathering</li>
+    <li class="tab-header" data-tab-id="pkmn">Pokemon</li>
+    <li class="tab-header" data-tab-id="yugi">Yugioh</li>
+  </ul>
+
+  <div id="mtg" class="tab-content active">
+    MON - 6pm Draft <br>
+    FRI - 6pm FNM Draft / 7pm Standard <br>
+    SAT - 1pm Standard / 6pm Draft <br>
   </div>
-  <div class="tab2">
-    <p>Pokemon</p>
+
+  <div id="pkmn" class="tab-content">
+    WED - 6pm Pokemon League <br>
+    SUN - 1pm Pokemon Standard <br>
   </div>
-  <div class="tab3">
-    <p>Yugioh</p>
+
+  <div id="yugi" class="tab-content">
+    TUE - 6pm Meet <br>
+    THU - 6pm Meet <br>
+    SUN - 6pm Meet <br>
   </div>
-</div>
+</div> 
+
+
+
 
 
 
