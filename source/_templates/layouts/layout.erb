@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
 
-  <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
   <title><%= (current_page.data.page_title || current_page.data.title).capitalize %> | <%= data.site.name %> </title>
   <meta content="<%= current_page.data.description || data.site.description %>" name="description" />
 
@@ -27,10 +27,10 @@
         <a href="/" class="nav-link">➜Visit Us On Facebook</a>
       </li>
       <li class="nav">
-        <a href="/" class="nav-link">Contact</a>
+        <a href="/" id="contact" class="nav-link">Contact</a>
       </li>
       <li class="nav">
-        <a href="/" class="nav-link">About</a>
+        <a href="/" id="about" class="nav-link">About</a>
       </li>
     </ul>
   </nav>
@@ -51,53 +51,66 @@
 <!--Banner STOP-->
 <!--About-->
 
-<div class="about">
+<div class=content-box>
+<div id="about" class="about">
   <h2 class="about-title">About MYTHIC GAMES</h2>
-  <p class="about-text">Mythic Games is the premier  place to play Magic: the Gathering, Warhammer, Warhammer 40,000, Dungeons and Dragons, and other role playing games in Monterey County. </p>
+  <p class="about-text">Mythic Games is the premier  place to play Magic: the Gathering, Pokemon TCG, Warhammer, Warhammer 40,000, Dungeons and Dragons, and other role playing games in Monterey County. See our FaceBook page for more information.</p>
+  <div class="products">
+    <ul class="brands">
+      <li class="brand"><img class="wotc" src="/assets/img/WotC.png" alt="Wizards of The Cost" style="width:130px;" ></li>
+      <li class="brand"><img class="ptcg" src="/assets/img/ptcg.png" alt="Pokemon" style="width:130px;" ></li>
+      <li class="brand"><img class="wh" src="/assets/img/wh.png" alt="Warhammer" style="width:130px;" ></li>
+      <li class="brand"><img class="gw" src="/assets/img/gw.png" alt="Games Workshop" style="width:130px;" ></li>
+    </ul>
+  </div>
 </div>
 
 <!--About Stop-->
 <!--Visit-->
-<div class="locations">
-  <h2 class="location-text">Visit A Shop Near You!</h2>
-<hr>
-  <li class="location">
-    <a href="/" class="city">-MONTEREY-</a>
-  </li>
-  <li class="location">
-    <a href="/" class="city">-SALINAS-</a>
-  </li>
-  <li class="location">
-    <a href="/" class="city">-SANTA CRUZ-</a>
-  </li>
+
+  <div class="locations">
+    <h2 class="location-text">Visit A Shop Near You!</h2>
+  <hr>
+    <li class="location">
+      <a href="/" class="city">-MONTEREY-</a>
+    </li>
+    <li class="location">
+      <a href="/" class="city">-SALINAS-</a>
+    </li>
+    <li class="location">
+      <a href="/" class="city">-SANTA CRUZ-</a>
+    </li>
+  </div>
+
+  <!--Tabs for Calander-->
+  <div class="tabs">
+    <ul class="tab-headers">
+      <li class="tab-header active" data-tab-id="mtg">Magic: The Gathering</li>
+      <li class="tab-header" data-tab-id="pkmn">Pokemon</li>
+      <li class="tab-header" data-tab-id="yugi">Yugioh</li>
+    </ul>
+
+    <div id="mtg" class="tab-content active">
+      MON - 6pm Draft <br>
+      FRI - 6pm FNM Draft / 7pm Standard <br>
+      SAT - 1pm Standard / 6pm Draft <br>
+    </div>
+
+    <div id="pkmn" class="tab-content">
+      WED - 6pm Pokemon League <br>
+      SUN - 1pm Pokemon Standard <br>
+    </div>
+
+    <div id="yugi" class="tab-content">
+      TUE - 6pm Meet <br>
+      THU - 6pm Meet <br>
+      SUN - 6pm Meet <br>
+    </div>
+  </div>
+
+
+
 </div>
-
-<!--Tabs for Calander-->
-<div class="tabs">
-  <ul class="tab-headers">
-    <li class="tab-header active" data-tab-id="mtg">Magic: The Gathering</li>
-    <li class="tab-header" data-tab-id="pkmn">Pokemon</li>
-    <li class="tab-header" data-tab-id="yugi">Yugioh</li>
-  </ul>
-
-  <div id="mtg" class="tab-content active">
-    MON - 6pm Draft <br>
-    FRI - 6pm FNM Draft / 7pm Standard <br>
-    SAT - 1pm Standard / 6pm Draft <br>
-  </div>
-
-  <div id="pkmn" class="tab-content">
-    WED - 6pm Pokemon League <br>
-    SUN - 1pm Pokemon Standard <br>
-  </div>
-
-  <div id="yugi" class="tab-content">
-    TUE - 6pm Meet <br>
-    THU - 6pm Meet <br>
-    SUN - 6pm Meet <br>
-  </div>
-</div> 
-
 
 
 

@@ -6,7 +6,8 @@ html,
 body {
   margin: 0;
   background-color: black;
-  font-family: 'Abel', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
 }
 
 p {
@@ -44,6 +45,7 @@ hr {
   text-decoration: none;
   color: rgb(219, 219, 219);
   font-size: 20px;
+  font-weight: 400;
   padding: 12px;
   &:hover {
     color: rgb(255, 255, 255);
@@ -53,10 +55,8 @@ hr {
 // Desktop View
 
 @include media (45em) {
-  .nav-box {
-    position: absolute;
-    z-index: 1;
-
+  .nav-link {
+    font-size: 25px;
   }
 }
  
@@ -82,17 +82,28 @@ hr {
   text-align: center;
 }
 
-// Content ABOUT ------------
+// Content BOX ------------
+
+.content-box {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+// Content about ------------
 
 .about {
   padding: 15px 0 45px 0;
-  background-color: #444;
+  background-color: #222;
   text-align: center;
   color: rgb(219, 219, 219);
+  @include media (55em) {
+    border-radius: 50px;
+  }
 }
 
 .about-title {
   font-size: 30px;
+  font-weight: 600;
 }
 
 .about-text {
@@ -100,6 +111,25 @@ hr {
   font-size: 18px;
 }
 
+.brands {
+  padding: 0;
+  list-style: none;
+}
+
+.brand {
+  width: 10%;
+  margin: 0 auto;
+  display: inline;
+  padding: 0 5px;
+}
+
+.wotc {
+  margin-bottom: -15px;
+}
+
+.wh {
+  margin-bottom: 10px;
+}
 // Content VISIT ------------
 
 .locations {
@@ -110,6 +140,7 @@ hr {
 
 .location-text{
   font-size: 30px;
+  font-weight: 500;
   margin-bottom: 0;
 }
 
@@ -129,6 +160,7 @@ hr {
 .city:hover {
   color: rgb(255, 255, 255);
   background-color: rgba(219, 219, 219, 0.4);
+  border-radius: 30px;
   cursor: pointer;
   -webkit-transition: background-color .5s ease-out;
   -moz-transition: background-color .5s ease-out;
@@ -155,7 +187,7 @@ hr {
 .tab-header {
   list-style-type: none;
   display: inline-block;
-  font-size: 19.6px;
+  font-size: 16.4px;
   background-color: #888;
   margin: 0;
   padding: 5px 15px;
